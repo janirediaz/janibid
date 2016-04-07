@@ -76,6 +76,8 @@ dependencies {
     runtime "mysql:mysql-connector-java:5.1.36"
     compile 'org.grails.plugins:spring-security-core:3.0.3'
     compile "org.grails.plugins:mail:2.0.0.RC2"
+
+
 }
 
 task wrapper(type: Wrapper) {

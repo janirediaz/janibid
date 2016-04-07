@@ -1,6 +1,7 @@
 package janibid
 
-class UserController {
+class DashBoardController {
+
 
     def index() { }
 }
