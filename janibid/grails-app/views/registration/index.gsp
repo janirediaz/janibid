@@ -1,6 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
+    <g:javascript src="validation.js" />
     <title>Formulario de Registro</title>
 </head>
 
@@ -8,7 +9,7 @@
 ${flash.error}
 <h3>Formulario de Registro</h3>
 
-<form name="form" id="registro" method="get" action="http://localhost:8080/registration/saveUser">
+<form name="form" id="registro" method="get" action="http://localhost:8080/registration/saveUser" onsubmit="return validacion()">
     <div class="form-group">
         <label class="control-label" for="nombre"></label>
         Usuario:<br><input  type="text" class="form-control" name="username" id="nombre" placeholder="Escribe tu nombre completo"></br>
@@ -31,6 +32,6 @@ ${flash.error}
 
 </form>
 
-
+<script type="text/javascript" src="js/lib/jquery-1.12.3.min.js"></script>
 </body>
 </html>
