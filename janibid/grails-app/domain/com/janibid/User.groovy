@@ -22,6 +22,8 @@ class User implements Serializable {
 	boolean accountLocked
 	boolean passwordExpired
 
+	static hasMany = [productos: Producto];
+
 	User(String username, String password) {
 		this()
 		this.username = username

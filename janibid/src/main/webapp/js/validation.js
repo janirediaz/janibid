@@ -15,8 +15,16 @@ function validacion(){
     }
 
     valor = document.getElementById("email").value;
-    if(!(/^[_a-z0-9-]+(.[_a-z0-9-]+)*@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,3})$/)){
+    if (!( /^[0-9a-zA-Z._.-]+\@[0-9a-zA-Z._.-]+\.[0-9a-zA-Z]+$/.test(valor))){
+        alert("La dirección de email es incorrecta.");
+        todo_Correcto = false;
+    }
 
+    var p1 = document.getElementById("password").value;
+    var p2 = document.getElementById("passRepeated").value;
+
+    if (p1 != p2) {
+        alert("Los passwords no coinciden");
         todo_Correcto = false;
     }
 
