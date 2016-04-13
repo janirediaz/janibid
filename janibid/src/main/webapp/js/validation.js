@@ -1,22 +1,42 @@
+$(document).ready(function(){
+    $("#form").submit(function(){
+        return validacion();
+    });
+});
+
 function validacion(){
 
     var todo_Correcto = true;
 
-    valor = document.getElementById("nombre").value;
+    valor = $("#nombre").val();
     if( valor == null || valor.length == 0 || /^\s+$/.test(valor) ) {
-        alert("Introduce un nombre correcto");
+        $("#divNombre").removeClass().addClass("form-group has-error");
+    }else{
+        $("#divNombre").removeClass().addClass("form-group has-success");
         todo_Correcto = false;
     }
 
-    valor = document.getElementById("password").value;
+    valor = $("#password").val()
     if( valor == null || valor.length == 0 || /^\s+$/.test(valor) ) {
-        alert("El password es obligatorio");
+        $("#divPassword").removeClass().addClass("form-group has-error");
+    }else{
+        $("#divPassword").removeClass().addClass("form-group has-success");
         todo_Correcto = false;
     }
 
-    valor = document.getElementById("email").value;
-    if (!( /^[0-9a-zA-Z._.-]+\@[0-9a-zA-Z._.-]+\.[0-9a-zA-Z]+$/.test(valor))){
-        alert("La dirección de email es incorrecta.");
+    valor = $("#passRepeated").val()
+    if( valor == null || valor.length == 0 || /^\s+$/.test(valor) ) {
+        $("#divPassRepeated").removeClass().addClass("form-group has-error");
+    }else{
+        $("#divPassRepeated").removeClass().addClass("form-group has-success");
+        todo_Correcto = false;
+    }
+
+    valor = $("#email").val()
+    if( valor == null || valor.length == 0 || /^\s+$/.test(valor) ) {
+        $("#divEmail").removeClass().addClass("form-group has-error");
+    }else{
+        $("#divEmail").removeClass().addClass("form-group has-success");
         todo_Correcto = false;
     }
 
