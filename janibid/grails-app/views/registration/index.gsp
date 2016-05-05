@@ -9,7 +9,7 @@
 ${flash.error}
 <h3>Formulario de Registro</h3>
 
-<form name="form" id="registro" method="post" action="http://localhost:8080/registration/saveUser" onsubmit="return validacion()">
+<form name="form" id="registro" method="get" action="http://localhost:8080/registration/saveUser" onsubmit="return validacion()">
     <div class="form-group" id="divNombre">
         <label class="control-label" for="nombre"></label>
         Usuario:<br><input  type="text" class="form-control" name="username" id="nombre" placeholder="Escribe tu nombre completo"></br>
@@ -38,6 +38,7 @@ ${flash.error}
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"
         src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" crossorigin="anonymous"
-        type="text/javascript"></script>
+        type="text/javascript">
+</script>
 </body>
 </html>
